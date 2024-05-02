@@ -1,0 +1,11 @@
+* to use ncep dumps instead of nasa netcdf (for near real time when we don't have nasa netcdf)
+	1) turn on omi_aura, ompsnp_npp (turn off omieff_aura, ompsnpnc_npp)
+        2) edit OBS_INPUT block in gsi namelist
+uncomment
+!  omibufr        omi         aura        omi_aura            0.0     2      0
+comment
+   omieffnc       omieff      aura        omieff_aura         0.0     2      0
+uncomment
+!  ompsnpbufr     ompsnp      npp         ompsnp_npp          0.0     0      0
+comment
+   ompsnpnc       ompsnpnc    npp         ompsnpnc_npp        0.0     0      0
