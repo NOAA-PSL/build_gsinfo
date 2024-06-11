@@ -1,8 +1,5 @@
 import ncepbufr,sys
-
-# dump contents of bufr file to stdout or to a text file.
-# Warning: resulting output may be HUGE.
-
+# print satids and counts for obsuv8 bufr dumps.
 bufr = ncepbufr.open(sys.argv[1])
 hdstr="SAID"
 satids = []
