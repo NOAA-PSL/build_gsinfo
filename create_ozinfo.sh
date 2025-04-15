@@ -5,7 +5,7 @@ echo '! For mls data, pressure and obs errors are pulled from bufr, so not liste
 echo '! sens/instr/sat lev  use pressure gross   obs    b_oz  pg_oz'
 echo '!                                  error  error variational qc'
 # loop over satellites
-cd ozinfo
+cd build_gsinfo-fix/ozinfo
 for sat in $(cat satellites); do
     # find matching date
     usedate=""

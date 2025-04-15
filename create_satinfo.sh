@@ -3,7 +3,7 @@ date=$1
 # header
 echo '!sensor/instr/sat      chan iuse  error  error_cld  ermax   var_b    var_pg  icld_det icloud iaerosol'
 # loop over satellites
-cd satinfo
+cd build_gsinfo-fix/satinfo
 for sat in $(cat satellites); do
     # find matching date
     usedate=""
