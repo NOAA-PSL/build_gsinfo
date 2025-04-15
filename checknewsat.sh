@@ -1,7 +1,7 @@
 # create global_satinfo file for a given date
 date=$1
 # loop over satellites
-cd satinfo
+cd build_gsinfo-fix/satinfo
 newsats=0
 for sat in $(cat satellites); do
     # find matching date, check for use flag=1

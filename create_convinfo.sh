@@ -1,6 +1,6 @@
 # create global_ozinfo file for a given date
 date=$1
-cd convinfo
+cd build_gsinfo-fix/convinfo
 #usedate=""
 #for datex in [1-2]*; do
 #   if [ $date -ge $datex ]; then
