@@ -6,8 +6,9 @@ echo '! For mls data, pressure and obs errors are pulled from bufr, so not liste
 echo '! sens/instr/sat lev  use pressure gross   obs    b_oz  pg_oz'
 echo '!                                  error  error variational qc'
 # loop over satellites
-cd /ozinfo || exit 1
-while IFS= read -r sat 
+cd ozinfo || exit 1
+grep -v '^ *#' satellites | while IFS= read -r sat
+#while IFS= read -r sat 
 do
     # find matching date
     usedate=""
@@ -26,4 +27,5 @@ do
         echo "date not found for ${sat}"
         exit 1
     fi
-done < <(grep -v '^ *#' satellites)
+done
+#done << $(grep -v '^ *#' satellites || true)
